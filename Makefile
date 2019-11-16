@@ -1,5 +1,7 @@
 CFLAGS += $(shell pkg-config --cflags --libs libbsd-overlay) -D_GNU_SOURCE
 
+all: patch
+
 patch: backupfile.c inp.c mkpath.c patch.c pch.c util.c
 
 install: all
